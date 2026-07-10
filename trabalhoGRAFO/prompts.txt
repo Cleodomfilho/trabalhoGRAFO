@@ -1,0 +1,265 @@
+ARQUIVO DE PROMPTS UTILIZADOS NO TRABALHO
+
+Projeto: Trabalho de Grafos - BFS e DFS para encontrar caminho entre dois nós
+Aluno: CLEODOM GOMES DA SILVA FILHO
+Instituição: IFMA - Campus Coelho Neto
+Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+Disciplina: Estrutura de Dados e Programação Orientada a Objetos
+Ferramenta utilizada: ChatGPT
+Modelo informado pela ferramenta: GPT-5.5 Thinking
+Data da organização deste arquivo: 09/07/2026
+
+Observação:
+Este arquivo registra, em ordem, os prompts enviados à ferramenta de IA durante a construção, melhoria, documentação e reorganização do projeto. O uso da IA foi feito como apoio, e o aluno deve compreender e explicar o funcionamento do código durante a apresentação.
+
+============================================================
+PROMPT 01 - Melhoria inicial do código de grafo
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: analisar o PDF do trabalho e melhorar o código inicial de grafo para atender aos requisitos.
+
+Prompt enviado:
+"com base no pdf me ajude a melhorar esse código de grafo do jeito que o trabalho manda"
+
+Resumo do apoio recebido:
+Foi analisado que o código inicial já possuía matriz de adjacência, vértices e arestas, mas precisava de BFS, DFS, reconstrução de caminho, tratamento de entradas inválidas e interface gráfica.
+
+============================================================
+PROMPT 02 - Separação do projeto em classes e pastas
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: separar o projeto em classes e pacotes para melhorar a organização em POO.
+
+Prompt enviado:
+"agora, faça as separações criando classes separadas para cada parte do trabalho e separando em pastas como no exemplo abaixo
+TrabalhoGrafos/
+│
+├── src/
+│   └── br/ifma/grafos/
+│       │       ├── Main.java
+│       │       ├── Interface/
+│       │       │   └── ControleGrafo.java 
+│       │       ├── Grafo/ 
+│       │       │   ├── Grafo.java
+│       │       │   ├── Vertice.java
+│       │       │   └── Aresta.java
+│       │       └── Utilidade/ 
+│       │           └── Busca.java 
+│
+├── prompts.txt
+└── README.md"
+
+Resumo do apoio recebido:
+O projeto foi separado em Main, interface, grafo, vértice, aresta, busca e arquivo de prompts.
+
+============================================================
+PROMPT 03 - Melhorias iniciais na interface e visualização
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: melhorar o visual da interface, acessibilidade e remover exemplo automático de grafo.
+
+Prompt enviado:
+"faça melhorias na interface para melhorar a acessibilidade e o visual, também apague o exemplo de grafo dentro do código e melhore a forma de exibição e animação do grafo"
+
+Resumo do apoio recebido:
+A interface foi melhorada, o grafo passou a abrir vazio, a visualização do grafo foi separada em um painel próprio e foram adicionados recursos de animação das buscas.
+
+============================================================
+PROMPT 04 - Interface compacta para dar mais espaço ao grafo
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: reduzir o espaço ocupado pelos comandos e aumentar a área visual do grafo.
+
+Prompt enviado:
+"melhore mais ainda visualização do grafo, as animações e a tela do grafo, a parte de inserir os vértices, arestas e fazer busca na interface também devem ser melhorados visualmente para ocupar menos espaço para dar mais espaço ao grafo"
+
+Resumo do apoio recebido:
+Os comandos foram organizados em abas, a área do grafo recebeu mais espaço e a interface ficou mais compacta.
+
+============================================================
+PROMPT 05 - Visibilidade dos comandos
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: melhorar a leitura e identificação dos botões e comandos.
+
+Prompt enviado:
+"melhore a visibilidade dos comandos"
+
+Resumo do apoio recebido:
+Foi iniciada a revisão da área de comandos da interface para deixá-la mais legível.
+
+============================================================
+PROMPT 06 - Comandos sem avisos fixos
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: deixar a interface mais limpa, sem avisos explicativos ocupando espaço.
+
+Prompt enviado:
+"melhore a visibilidade dos comandos na interface, não precisa ter avisos e algo indicando como usar"
+
+Resumo do apoio recebido:
+Foram removidos textos de orientação desnecessários para deixar a tela mais limpa.
+
+============================================================
+PROMPT 07 - Comandos sem legendas
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: retirar legendas fixas e manter apenas os comandos essenciais.
+
+Prompt enviado:
+"melhore a visibilidade dos comandos na interface, não precisa ter legendas e algo indicando como usar"
+
+Resumo do apoio recebido:
+A interface foi ajustada para evitar informações repetidas e manter foco no grafo.
+
+============================================================
+PROMPT 08 - Interface limpa para visualizar o grafo
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: deixar a tela limpa, com foco principal na visualização do grafo.
+
+Prompt enviado:
+"melhore a visibilidade dos comandos na interface, não precisa ter legendas e algo indicando como usar na tela da interface, quero algo limpo para ver o grafo"
+
+Resumo do apoio recebido:
+A interface foi simplificada, os textos de ajuda foram retirados e a área visual do grafo ganhou mais destaque.
+
+============================================================
+PROMPT 09 - Melhoria das cores dos botões e organização dos prompts
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: melhorar o contraste dos botões nas áreas Entrada e Busca e organizar o arquivo de prompts.
+
+Prompt enviado:
+"na interface, dentro da área de entrada e buscas os botões estão com cores ruins de enxergar, melhore isso e organize os prompts"
+
+Resumo do apoio recebido:
+Os botões receberam cores com maior contraste, como verde escuro, azul forte e vermelho para ações principais, além da reorganização do prompts.txt.
+
+============================================================
+PROMPT 10 - Melhoria da animação das buscas
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: melhorar a animação de BFS e DFS para facilitar a apresentação.
+
+Prompt enviado:
+"agora melhore a animação das buscas"
+
+Resumo do apoio recebido:
+A animação passou a destacar arestas usadas na busca, ponto móvel percorrendo a aresta, pulso no vértice atual, numeração da ordem de visitação e destaque final do caminho encontrado.
+
+============================================================
+PROMPT 11 - Documento explicativo inicial
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: criar um PDF explicando o trabalho para ajudar na apresentação.
+
+Prompt enviado:
+"quero um documento em pdf explicando cada parte do trabalho feito para me ajudar a entender como funciona o os metodos do código e explicar para o professor durante a apresentação"
+
+Resumo do apoio recebido:
+Foi produzido um guia explicativo inicial sobre o funcionamento do trabalho e dos métodos principais do código.
+
+============================================================
+PROMPT 12 - Documento com situações para cada método
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: ampliar o documento explicativo com situações de análise para cada método.
+
+Prompt enviado:
+"quero um documento em pdf explicando cada parte do trabalho feito para me ajudar a entender como funciona o os metodos do código e explicar para o professor durante a apresentação, acrescente também situações para cada metodo (como fazer de outro deito, o que acontece se o metodo for retirado ou não funcionar, como melhorar ele futuramente)"
+
+Resumo do apoio recebido:
+O guia foi ampliado com explicações sobre formas alternativas de implementação, consequências de remover métodos e possíveis melhorias futuras.
+
+============================================================
+PROMPT 13 - Documento completo sobre todos os métodos
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: criar um guia completo sobre todos os métodos do código.
+
+Prompt enviado:
+"quero um documento em pdf explicando cada parte do trabalho feito para me ajudar a entender como funciona todos os metodos do código e explicar para o professor durante a apresentação, acrescente também situações para cada metodo (como fazer de outro jeito, o que acontece se o metodo for retirado ou não funcionar, como melhorar ele futuramente)"
+
+Resumo do apoio recebido:
+Foi criado um PDF completo de estudo e apresentação, explicando estrutura do projeto, métodos, BFS, DFS, matriz de adjacência, interface, animação, erros e melhorias futuras.
+
+============================================================
+PROMPT 14 - PDF com todos os prompts e assinatura digital
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: gerar um PDF com os prompts usados, seguindo o que o trabalho pede.
+
+Prompt enviado:
+"agora, faça um pdf com todos os prompts que eu mandei até agora, do jeito que o trabalho pede e coloque minha assinatura digital no final: CLEODOM GOMES DA SILVA FILHO"
+
+Resumo do apoio recebido:
+Foi criado um PDF com os prompts organizados e assinatura digital do aluno ao final.
+
+============================================================
+PROMPT 15 - Reorganização por competências
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: reorganizar a estrutura do projeto de acordo com as competências/critérios do PDF do trabalho.
+
+Prompt enviado:
+"reorganize a estrutura do trabalho de acordo com as competências do pdf do trabalho"
+
+Resumo do apoio recebido:
+O projeto foi reorganizado em pastas relacionadas às competências avaliadas: implementação do grafo, implementação das buscas BFS/DFS, interface gráfica, documentação/apresentação e registro dos prompts.
+
+============================================================
+PROMPT 16 - Adição dos prompts na estrutura reorganizada
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: atualizar o arquivo prompts.txt dentro da estrutura reorganizada do trabalho.
+
+Prompt enviado:
+"reorganizei a estrtura do trabalho, adicione os prompts que foram feitos até agora"
+
+Resumo do apoio recebido:
+O arquivo prompts.txt foi atualizado com todos os prompts usados até o momento, em ordem, com ferramenta, modelo, objetivo, prompt enviado e resumo do apoio recebido.
+
+============================================================
+RESUMO GERAL DO APOIO RECEBIDO
+============================================================
+- Análise dos requisitos do PDF do trabalho.
+- Melhoria da estrutura do grafo em Java com Programação Orientada a Objetos.
+- Organização das classes do projeto.
+- Criação das classes Grafo, Vertice e Aresta.
+- Uso de matriz de adjacência para representar conexões.
+- Implementação de BFS usando fila.
+- Implementação de DFS usando recursão.
+- Controle de vértices visitados para evitar ciclos infinitos.
+- Reconstrução do caminho entre origem e destino.
+- Tratamento de entradas inválidas.
+- Criação e melhoria da interface gráfica em Java Swing.
+- Melhoria da visualização do grafo.
+- Melhoria das animações das buscas.
+- Organização do projeto por competências do trabalho.
+- Criação de documentação para estudo e apresentação.
+- Organização dos prompts usados com IA.
+
+============================================================
+DECLARAÇÃO DO ALUNO
+============================================================
+Declaro que utilizei a ferramenta de Inteligência Artificial como apoio para organizar, revisar e melhorar o trabalho, mas compreendo que devo saber explicar o funcionamento do código, das buscas BFS e DFS, da matriz de adjacência e da interface gráfica durante a apresentação.
+
+Assinatura digital:
+CLEODOM GOMES DA SILVA FILHO

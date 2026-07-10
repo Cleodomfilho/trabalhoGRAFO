@@ -1,0 +1,14 @@
+# Arquivos compilados Java
+out/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# ZIPs gerados
+*.zip
