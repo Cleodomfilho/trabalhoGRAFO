@@ -198,7 +198,20 @@ Resumo do apoio recebido:
 Foi criado um PDF completo de estudo e apresentação, explicando estrutura do projeto, métodos, BFS, DFS, matriz de adjacência, interface, animação, erros e melhorias futuras.
 
 ============================================================
-PROMPT 14 - PDF com todos os prompts e assinatura digital
+PROMPT 14 - Legendas simples para métodos e prompt na página
+============================================================
+Ferramenta: ChatGPT
+Modelo: GPT-5.5 Thinking
+Objetivo: adicionar legendas simples explicando o que cada método faz e registrar o prompt no arquivo de prompts.
+
+Prompt enviado:
+"adicione legendas explicando o que os métodos de cada classe faz de forma simples e direta e adicione esse prompt a página"
+
+Resumo do apoio recebido:
+Os métodos das classes foram comentados com explicações simples e diretas, e o prompt foi registrado no arquivo de prompts do projeto.
+
+============================================================
+PROMPT 15 - PDF com todos os prompts e assinatura digital
 ============================================================
 Ferramenta: ChatGPT
 Modelo: GPT-5.5 Thinking
@@ -211,7 +224,7 @@ Resumo do apoio recebido:
 Foi criado um PDF com os prompts organizados e assinatura digital do aluno ao final.
 
 ============================================================
-PROMPT 15 - Reorganização por competências
+PROMPT 16 - Reorganização por competências
 ============================================================
 Ferramenta: ChatGPT
 Modelo: GPT-5.5 Thinking
@@ -224,7 +237,7 @@ Resumo do apoio recebido:
 O projeto foi reorganizado em pastas relacionadas às competências avaliadas: implementação do grafo, implementação das buscas BFS/DFS, interface gráfica, documentação/apresentação e registro dos prompts.
 
 ============================================================
-PROMPT 16 - Adição dos prompts na estrutura reorganizada
+PROMPT 17 - Adição dos prompts na estrutura reorganizada
 ============================================================
 Ferramenta: ChatGPT
 Modelo: GPT-5.5 Thinking

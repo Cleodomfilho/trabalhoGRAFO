@@ -19,6 +19,9 @@ import java.util.Queue;
  */
 public class Busca {
 
+    /**
+     * Faz a busca em largura (BFS) do nó de origem até o destino.
+     */
     public static ResultadoBusca buscarEmLargura(Grafo grafo, String origem, String destino) {
         validarEntrada(grafo, origem, destino);
 
@@ -62,6 +65,9 @@ public class Busca {
         return new ResultadoBusca(ordemVisitada, caminho, montarArestasDaAnimacao(grafo, anterior, ordemVisitada, indiceOrigem));
     }
 
+    /**
+     * Faz a busca em profundidade (DFS) do nó de origem até o destino.
+     */
     public static ResultadoBusca buscarEmProfundidade(Grafo grafo, String origem, String destino) {
         validarEntrada(grafo, origem, destino);
 
@@ -83,6 +89,9 @@ public class Busca {
         return new ResultadoBusca(ordemVisitada, caminho, montarArestasDaAnimacao(grafo, anterior, ordemVisitada, indiceOrigem));
     }
 
+    /**
+     * Função recursiva que explora o grafo em profundidade.
+     */
     private static boolean dfsRecursivo(Grafo grafo, int atual, int destino, boolean[] visitados, int[] anterior, List<String> ordemVisitada) {
         visitados[atual] = true;
         ordemVisitada.add(grafo.getVertice(atual).getNome());
@@ -107,6 +116,9 @@ public class Busca {
     }
 
 
+    /**
+     * Monta a lista de arestas usada para animar os passos da busca.
+     */
     private static List<String> montarArestasDaAnimacao(Grafo grafo, int[] anterior, List<String> ordemVisitada, int indiceOrigem) {
         List<String> arestas = new ArrayList<>();
 
@@ -131,6 +143,9 @@ public class Busca {
         return arestas;
     }
 
+    /**
+     * Reconstrói o caminho final a partir do vetor de antecessores.
+     */
     private static List<String> reconstruirCaminho(Grafo grafo, int[] anterior, int origem, int destino) {
         LinkedList<String> caminho = new LinkedList<>();
         int atual = destino;
@@ -147,6 +162,9 @@ public class Busca {
         return caminho;
     }
 
+    /**
+     * Verifica se os dados da busca são válidos antes de executar o algoritmo.
+     */
     private static void validarEntrada(Grafo grafo, String origem, String destino) {
         if (grafo == null) {
             throw new IllegalArgumentException("O grafo não pode ser nulo.");
@@ -168,6 +186,9 @@ public class Busca {
         }
     }
 
+    /**
+     * Converte o caminho encontrado em texto legível para exibição.
+     */
     public static String formatarCaminho(List<String> caminho) {
         if (caminho == null || caminho.isEmpty()) {
             return "Não existe caminho entre os vértices escolhidos.";
@@ -175,6 +196,9 @@ public class Busca {
         return String.join(" -> ", caminho);
     }
 
+    /**
+     * Converte a ordem de visitação em texto legível para exibição.
+     */
     public static String formatarOrdemVisitada(List<String> ordemVisitada) {
         if (ordemVisitada == null || ordemVisitada.isEmpty()) {
             return "Nenhum vértice foi visitado.";

@@ -15,6 +15,9 @@ public class Aresta {
     private Vertice destino;
     private int peso;
 
+    /**
+     * Cria uma aresta entre dois vértices com o peso informado.
+     */
     public Aresta(Vertice origem, Vertice destino, int peso) {
         if (origem == null || destino == null) {
             throw new IllegalArgumentException("Origem e destino devem existir.");
@@ -27,18 +30,30 @@ public class Aresta {
         this.peso = peso;
     }
 
+    /**
+     * Retorna o vértice de origem da aresta.
+     */
     public Vertice getOrigem() {
         return origem;
     }
 
+    /**
+     * Retorna o vértice de destino da aresta.
+     */
     public Vertice getDestino() {
         return destino;
     }
 
+    /**
+     * Retorna o peso associado a esta aresta.
+     */
     public int getPeso() {
         return peso;
     }
 
+    /**
+     * Atualiza o peso da aresta.
+     */
     public void setPeso(int peso) {
         if (peso <= 0) {
             throw new IllegalArgumentException("O peso da aresta deve ser maior que zero.");

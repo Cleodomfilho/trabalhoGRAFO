@@ -15,14 +15,23 @@ public class Vertice {
 
     private String nome;
 
+    /**
+     * Cria um vértice com o nome informado.
+     */
     public Vertice(String nome) {
         setNome(nome);
     }
 
+    /**
+     * Retorna o nome do vértice em maiúsculo.
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * Ajusta o nome do vértice e normaliza para evitar duplicatas.
+     */
     public void setNome(String nome) {
         if (nome == null || nome.trim().isEmpty()) {
             throw new IllegalArgumentException("O nome do vértice não pode ser vazio.");

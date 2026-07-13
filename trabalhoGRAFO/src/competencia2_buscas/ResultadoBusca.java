@@ -23,28 +23,46 @@ public class ResultadoBusca {
     private List<String> caminho;
     private List<String> arestasAnimacao;
 
+    /**
+     * Cria o resultado da busca com ordem visitada e caminho encontrado.
+     */
     public ResultadoBusca(List<String> ordemVisitada, List<String> caminho) {
         this(ordemVisitada, caminho, new ArrayList<>());
     }
 
+    /**
+     * Cria o resultado da busca incluindo os passos da animação.
+     */
     public ResultadoBusca(List<String> ordemVisitada, List<String> caminho, List<String> arestasAnimacao) {
         this.ordemVisitada = new ArrayList<>(ordemVisitada);
         this.caminho = new ArrayList<>(caminho);
         this.arestasAnimacao = new ArrayList<>(arestasAnimacao);
     }
 
+    /**
+     * Retorna os vértices visitados na ordem em que foram alcançados.
+     */
     public List<String> getOrdemVisitada() {
         return Collections.unmodifiableList(ordemVisitada);
     }
 
+    /**
+     * Retorna o caminho final reconstruído entre origem e destino.
+     */
     public List<String> getCaminho() {
         return Collections.unmodifiableList(caminho);
     }
 
+    /**
+     * Retorna a lista de arestas usadas para animar a busca.
+     */
     public List<String> getArestasAnimacao() {
         return Collections.unmodifiableList(arestasAnimacao);
     }
 
+    /**
+     * Retorna a aresta usada em um passo específico da animação.
+     */
     public String getArestaAnimacaoDoPasso(int indice) {
         if (indice < 0 || indice >= arestasAnimacao.size()) {
             return "";
@@ -52,6 +70,9 @@ public class ResultadoBusca {
         return arestasAnimacao.get(indice);
     }
 
+    /**
+     * Indica se a busca encontrou um caminho entre os vértices.
+     */
     public boolean encontrouCaminho() {
         return !caminho.isEmpty();
     }

@@ -21,6 +21,9 @@ public class Grafo {
     private boolean direcionado;
     private int capacidadeMaxima;
 
+    /**
+     * Cria um grafo com capacidade máxima de vértices e tipo direcionado ou não.
+     */
     public Grafo(int capacidadeMaxima, boolean direcionado) {
         if (capacidadeMaxima <= 0) {
             throw new IllegalArgumentException("A capacidade do grafo deve ser maior que zero.");
@@ -32,6 +35,9 @@ public class Grafo {
         this.arestas = new ArrayList<>();
     }
 
+    /**
+     * Adiciona um novo vértice ao grafo se o nome for válido e não existir.
+     */
     public void adicionarVertice(String nome) {
         if (vertices.size() >= capacidadeMaxima) {
             throw new IllegalStateException("Limite máximo de vértices atingido.");
@@ -46,6 +52,9 @@ public class Grafo {
         vertices.add(novoVertice);
     }
 
+    /**
+     * Cria uma aresta entre dois vértices existentes com o peso informado.
+     */
     public void adicionarAresta(String nomeOrigem, String nomeDestino, int peso) {
         int indiceOrigem = getIndiceVertice(nomeOrigem);
         int indiceDestino = getIndiceVertice(nomeDestino);
@@ -68,6 +77,9 @@ public class Grafo {
         atualizarListaDeArestas(indiceOrigem, indiceDestino, peso);
     }
 
+    /**
+     * Atualiza a lista de arestas no modo visual e evita duplicidade.
+     */
     private void atualizarListaDeArestas(int indiceOrigem, int indiceDestino, int peso) {
         Vertice origem = vertices.get(indiceOrigem);
         Vertice destino = vertices.get(indiceDestino);
@@ -85,10 +97,16 @@ public class Grafo {
         arestas.add(new Aresta(origem, destino, peso));
     }
 
+    /**
+     * Verifica se um vértice com este nome existe no grafo.
+     */
     public boolean existeVertice(String nome) {
         return getIndiceVertice(nome) != -1;
     }
 
+    /**
+     * Retorna o índice do vértice pelo nome ou -1 se não existir.
+     */
     public int getIndiceVertice(String nome) {
         if (nome == null) {
             return -1;
@@ -104,6 +122,9 @@ public class Grafo {
         return -1;
     }
 
+    /**
+     * Retorna o vértice no índice informado.
+     */
     public Vertice getVertice(int indice) {
         if (indice < 0 || indice >= vertices.size()) {
             throw new IndexOutOfBoundsException("Índice de vértice inválido.");
@@ -111,6 +132,9 @@ public class Grafo {
         return vertices.get(indice);
     }
 
+    /**
+     * Lista os vértices diretamente conectados a partir de um vértice.
+     */
     public List<Vertice> getVizinhos(String nome) {
         int linha = getIndiceVertice(nome);
 
@@ -128,6 +152,9 @@ public class Grafo {
         return vizinhos;
     }
 
+    /**
+     * Retorna o peso da aresta entre dois índices de vértice.
+     */
     public int getPesoAresta(int indiceOrigem, int indiceDestino) {
         if (indiceOrigem < 0 || indiceDestino < 0 || indiceOrigem >= vertices.size() || indiceDestino >= vertices.size()) {
             throw new IndexOutOfBoundsException("Índice de aresta inválido.");
@@ -135,6 +162,9 @@ public class Grafo {
         return matrizAdjacencia[indiceOrigem][indiceDestino];
     }
 
+    /**
+     * Retorna o peso da aresta entre dois vértices pelos seus nomes.
+     */
     public int getPesoAresta(String origem, String destino) {
         int indiceOrigem = getIndiceVertice(origem);
         int indiceDestino = getIndiceVertice(destino);
@@ -145,14 +175,23 @@ public class Grafo {
         return matrizAdjacencia[indiceOrigem][indiceDestino];
     }
 
+    /**
+     * Retorna a lista de vértices do grafo.
+     */
     public List<Vertice> getVertices() {
         return Collections.unmodifiableList(vertices);
     }
 
+    /**
+     * Retorna a lista de arestas cadastradas no grafo.
+     */
     public List<Aresta> getArestas() {
         return Collections.unmodifiableList(arestas);
     }
 
+    /**
+     * Retorna uma cópia da matriz de adjacência atual.
+     */
     public int[][] getMatrizAdjacencia() {
         int[][] copia = new int[vertices.size()][vertices.size()];
 
@@ -164,14 +203,23 @@ public class Grafo {
         return copia;
     }
 
+    /**
+     * Indica se o grafo é direcionado.
+     */
     public boolean isDirecionado() {
         return direcionado;
     }
 
+    /**
+     * Retorna a quantidade de vértices atualmente adicionados.
+     */
     public int quantidadeVertices() {
         return vertices.size();
     }
 
+    /**
+     * Forma um texto legível com os vizinhos e pesos de cada vértice.
+     */
     public String imprimirGrafo() {
         StringBuilder texto = new StringBuilder();
 
@@ -202,6 +250,9 @@ public class Grafo {
         return texto.toString();
     }
 
+    /**
+     * Cria uma representação em texto da matriz de adjacência.
+     */
     public String imprimirMatriz() {
         StringBuilder texto = new StringBuilder();
 
